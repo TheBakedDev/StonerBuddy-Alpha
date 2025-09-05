@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🌿 Stoner Buddy 🌿</title>
+  <meta name="description" content="Project hub for Stoner Buddy: stable builds, alpha experiments, and roadmap." />
+  <meta property="og:title" content="Stoner Buddy Repositories" />
+  <meta property="og:description" content="Stable 4.0.0, spicy alpha builds, and roadmap in one chill place." />
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #0f172a;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #22c55e;
+      --accent-2: #86efac;
+      --ring: rgba(34,197,94,0.35);
+    }
+    * { box-sizing: border-box; }
+    html,body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(34,197,94,0.12), transparent 60%),
+                  radial-gradient(1000px 500px at 110% 10%, rgba(16,185,129,0.10), transparent 60%),
+                  var(--bg);
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding: 12px 0; }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .logo { width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg,#22c55e, #16a34a); box-shadow: 0 8px 30px rgba(34,197,94,.35); }
+    .title { font-weight: 800; letter-spacing: 0.2px; }
+    nav { display:flex; gap: 14px; flex-wrap: wrap; }
+    nav a { padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,0.04); color: var(--text); }
+    nav a:hover { background: rgba(255,255,255,0.08); text-decoration:none; }
+
+    .hero { display:grid; grid-template-columns: 1.2fr 0.8fr; gap: 28px; align-items:center; padding: 40px 0 10px; }
+    .hero h1 { font-size: clamp(32px, 4vw, 46px); margin: 0 0 12px; }
+    .hero p { color: var(--muted); margin: 0 0 18px; }
+    .cta { display:flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding: 12px 16px; border-radius: 14px; font-weight: 700; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 28px rgba(0,0,0,0.35); text-decoration:none; }
+    .btn.primary { background: linear-gradient(135deg, #22c55e, #16a34a); color: #07140a; border-color: transparent; }
+
+    .card { background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 18px; box-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+
+    .grid { display:grid; gap: 18px; grid-template-columns: repeat(3,minmax(0,1fr)); }
+    @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } .grid { grid-template-columns: 1fr; } }
+
+    h2 { margin-top: 32px; margin-bottom: 12px; font-size: 22px; }
+    .muted { color: var(--muted); }
+    .tag { display:inline-block; padding: 4px 10px; border-radius: 999px; background: rgba(34,197,94,0.18); color: #d1fae5; border: 1px solid rgba(34,197,94,0.35); font-size: 12px; font-weight: 700; letter-spacing:.3px; }
+
+    footer { border-top: 1px solid rgba(255,255,255,0.08); margin-top: 40px; padding: 18px 0; color: var(--muted); font-size: 14px; text-align:center; }
+
+    .note { border-left: 3px solid var(--accent); padding: 10px 12px; background: rgba(34,197,94,0.08); border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img class="logo" src="assets/profile.png" alt="Stoner Buddy logo">
+        <div>
+          <div class="title">Stoner Buddy Public</div>
+          <div class="muted" style="font-size:13px">Stable 4.0.0 • Alpha playground</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#downloads">Releases</a>
+        <a href="#alpha">Alpha</a>
+        <a href="#links">Links</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>One chill hub for stable builds and spicy experiments 🌶️</h1>
+        <p>Welcome! This is the official showcase for <strong>Stoner Buddy</strong>. Start with the super-stable <span class="tag">v4.0.0</span> or peek at early alpha builds. Docs will come later—this is a lightweight preview while things are cooking.</p>
+        <div class="cta">
+          <a class="btn primary" href="#downloads">Get Stable 4.0.0</a>
+          <a class="btn" href="#alpha">Alpha (preview)</a>
+        </div>
+        <p class="muted" style="margin-top:10px">No login • No backend • Open Source</p>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 8px">Roadmap</h3>
+        <ul style="margin:0; padding-left:18px; line-height:1.6">
+          <li>Keep stable 4.0.0 solid</li>
+          <li>Experiment with alpha features</li>
+          <li>Gather community feedback</li>
+          <li>Add a "How to fix" later</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="card">
+        <p><strong>Stoner Buddy</strong> is your laid‑back assistant. The <span class="tag">4.0.0</span> release focuses on stability and simple joy. The alpha track explores new ideas that may be wobbly but fun.</p>
+        <p class="note">Tip: If you’re new, start with <strong>Stable</strong>. If you like adventure, cruise into <strong>Alpha</strong>.</p>
+        <p class="note">Features: 🧘 Wisdom & Quotes – random stoner wisdoms and life quotes
+        🎲 Mini Games
+        /wyr — Would You Rather (stoner edition, live vote buttons)
+        /rolljoint — Roll the Joint (get your private random outcome)
+        🥡 Food
+        /food — random munchies from categories (sweet, salty, quick, gourmet…)
+        Food Combos button on the panel (instant snack ideas + reroll)
+        /localfood — find real nearby restaurants using OpenStreetMap (by city/ZIP)
+        🌱 Strain Picker – suggests cannabis strains by vibe
+        🎬 Movie Picker – chill movie suggestions for your sesh
+        💨 Blinker Timer – 10s countdown for vape blinks
+        💧 Hydrate Reminder – keep your cottonmouth in check
+        🎵 Music Player – play, queue, skip songs in VC
+        🛠️ Owner Tools – /say, /control, /shutdown, logging
+        🌺 Better Play Back
+            </div>
+            </section>
+
+    <section id="downloads">
+      <h2>Releases</h2>
+      <div class="grid">
+        <div class="card">
+          <h3 style="margin-top:6px">Stable 4.0.0</h3>
+          <p class="muted">Super-stable, recommended for most folks.</p>
+          <ul>
+            <li><a href="#">Download (ZIP)</a></li>
+            <li><a href="#">Release notes</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:6px">Beta Channel</h3>
+          <p class="muted">New stuff with guardrails. Good middle ground.</p>
+          <ul>
+            <li><a href="#">Latest beta</a></li>
+            <li><a href="#">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="card" id="alpha">
+          <h3 style="margin-top:6px">Alpha Builds</h3>
+          <p class="muted">Bleeding edge. Might sparkle. Might explode. Probably both.</p>
+          <ul>
+            <li><a href="#">Newest alpha</a></li>
+            <li><a href="#">Known issues</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="links">
+      <h2>Links</h2>
+      <div class="card">
+        <ul>
+          <li>GitHub (stable): <a href="#">https://github.com/TheBakedDev/Stoner-BuddyV1</a></li>
+          <li>GitHub (alpha): <a href="#">https://github.com/TheBakedDev/StonerBuddy-Alpha</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Stoner Buddy. Made with snacks and vibes.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
